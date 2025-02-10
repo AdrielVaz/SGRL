@@ -1,0 +1,482 @@
+
+
+/* Container Principal */
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background: #EBEFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://img.freepik.com/fotos-premium/fundo-design-colorido-melhor-qualidade-imagem-de-papel-de-parede-hiper-realista_1078161-90199.jpg?semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+/* Header */
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #058AB5, #6FD9F0);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+/* Logo e Título */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    color: #034A6E; /* Azul escuro */
+    margin: 0;
+}
+
+/* Aviso sobre Funções Adicionais */
+header .aviso {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #058AB5; /* Azul mais claro */
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+header .aviso i {
+    font-size: 1.2rem;
+    color: #058AB5;
+}
+
+header .aviso::after {
+    content: "Mais funções disponíveis no menu superior esquerdo!";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+header .aviso:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+/* Container Principal */
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Fundo branco com 95% de opacidade */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 120px auto 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Título Principal */
+.container h1 {
+    font-size: 3rem;
+    color: #034A6E; /* Azul escuro */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtítulo */
+.container h2 {
+    font-size: 1.8rem;
+    color: #058AB5; /* Azul mais claro */
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+.container p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botões de Ação */
+.container .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #058AB5; /* Azul claro */
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+}
+
+.container .btn:hover {
+    background: #034A6E; /* Azul escuro */
+    transform: translateY(-3px);
+}
+
+/* Seção de Destaque com Imagem */
+.container .hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.container .hero img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container .hero img:hover {
+    transform: scale(1.05);
+}
+
+.container .hero-content {
+    flex: 1;
+}
+
+.container .hero h3 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.container .hero p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Seção de Chamada para Ação */
+.container .cta {
+    background: rgba(255, 235, 59, 0.9); /* Amarelo para destaque */
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container .cta h3 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.container .cta p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Seção Sobre a Empresa */
+.container .about-company {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.container .about-company img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container .about-company img:hover {
+    transform: scale(1.05);
+}
+
+.container .about-company h3 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.container .about-company p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Seção de Contato */
+.container .contact {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.container .contact h3 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.container .contact p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.container .contact a {
+    color: #058AB5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container .contact a:hover {
+    text-decoration: underline;
+}
+/* Menu que abre de cima para baixo, alinhado à esquerda do topo */
+.menu-top {
+    position: fixed;
+    top: -100px; /* Inicialmente escondido acima da tela */
+    left: 20px; /* Afastado da lateral esquerda */
+    width: 200px; /* Largura do menu */
+    height: auto; /* Altura automática baseada no conteúdo */
+    background: linear-gradient(180deg, #058AB5, #6FD9F0);
+    border: 4px solid #034A6E; /* Borda destacada */
+    border-radius: 0px 0px 25px 25px;
+    padding: 20px 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    transition: top 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+}
+
+/* Expandir ao passar o mouse */
+.menu-top:hover {
+    top: 0px; /* Desce para a posição inicial */
+}
+
+/* Imagem do perfil */
+.menu-top img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Links */
+.menu-top a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: 0.3s;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Expandir os textos apenas ao passar o mouse */
+.menu-top:hover a {
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+/* Ícones */
+.menu-top a i {
+    font-size: 22px;
+}
+
+/* Hover nos links */
+.menu-top a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Ícone de menu (☰) para indicar que há um menu escondido */
+.menu-icon {
+    position: fixed;
+    left: 20px; /* Alinhado com o menu */
+    top: 20px;
+    font-size: 30px;
+    color: #034A6E;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Sinal piscando para chamar atenção */
+@keyframes piscar {
+    0% { opacity: 1; transform: translateY(-20px); }
+    50% { opacity: 0.5; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(-20px); }
+}
+
+.menu-icon {
+    animation: piscar 1.5s infinite;
+}
+
+/* Seção Lateral (Imagem e Informações) */
+.side-section {
+    position: fixed;
+    right: 20px; /* Posiciona na lateral direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o posicionamento vertical */
+    width: 300px; /* Largura da seção lateral */
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999; /* Garante que fique acima do conteúdo */
+}
+
+.side-section img {
+    width: 100%; /* Imagem ocupa toda a largura da seção */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.side-section h2 {
+    font-size: 1.8rem;
+    color: #034A6E;
+    margin-bottom: 10px;
+}
+
+.side-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Seção Sobre Nós */
+.about {
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Seção Nossos Objetivos */
+.goals {
+    background: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.goals h2 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 15px;
+}
+
+.goals p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer img {
+    width: 100px; /* Ajuste o tamanho da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 10px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: left;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+    line-height: 1.4;
+}
