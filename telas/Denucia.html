@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGRL - Gestão de Rios e Lagos</title>
+    <link rel="stylesheet" href="/assets/denucia.css">
+    <!-- Link corrigido do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Logo e Título -->
+        <div class="logo">
+            <img src="/assets/img/76cdac4c-2849-4229-9be1-8f8a06a6d7b7-removebg-preview.png" alt="Ícone SGRL">
+            <h1>Bem-vindo ao SGRL</h1>
+        </div>
+    
+        <!-- Aviso sobre Funções Adicionais -->
+        <div class="aviso">
+            <i class="fas fa-info-circle"></i> <!-- Ícone de informação -->
+            <span>Mais funções</span>
+        </div>
+    </header>
+
+    <!-- Menu que abre de cima para baixo -->
+    <div class="menu-top">
+        <img src="perfil.jpg" alt="Foto de Perfil">
+        <a href="#"><i class="fas fa-exclamation-triangle"></i> Denúncia</a>
+        <a href="#"><i class="fas fa-id-card"></i> Perfil</a>
+        <a href="#"><i class="fas fa-phone-alt"></i> Contato</a>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-file-alt"></i> Instruções</a>
+        <a href="#"><i class="fas fa-water"></i> Sobre</a>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção da Imagem -->
+        <div class="image-section">
+            <img src="/assets/img/img-removebg-preview.png" alt="Imagem de Denúncia">
+        </div>
+    </div>
+
+    <!-- Formulário de Denúncia Separado -->
+    <div class="form-container">
+        <h1>Formulário de Denúncia</h1>
+        <form class="denuncia-form">
+            <!-- Campo CEP -->
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+            </div>
+
+            <!-- Campo Bairro -->
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" placeholder="EX: Cidade Nova, Rua 7 de Janeiro" required>
+            </div>
+
+            <!-- Campo Nome do Rio/Lago -->
+            <div class="form-group">
+                <label for="rio-lago">Nome do Rio/Lago:</label>
+                <input type="text" id="rio-lago" name="rio-lago" placeholder="EX: Rio das Tripas" required>
+            </div>
+
+            <!-- Campo Contato -->
+            <div class="form-group">
+                <label for="contato">Contato (Ex: E-mail ou telefone):</label>
+                <input type="text" id="contato" name="contato" placeholder="+55 () 00000-0000" required>
+            </div>
+
+            <!-- Campo Descrição do Problema -->
+            <div class="form-group">
+                <label for="problema">Descreva o problema:</label>
+                <textarea id="problema" name="problema" placeholder="EX: Rio das tripas sujo..." required></textarea>
+            </div>
+
+            <!-- Botão de Enviar -->
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+<!-- Seção de Importância da Denúncia -->
+<section class="importancia-denuncia">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>Denunciar é um Ato de Cidadania</h2>
+        <p>
+            A preservação dos rios e lagos depende de todos nós. Ao denunciar problemas ambientais, 
+            você contribui para a fiscalização e melhoria da qualidade da água, protegendo a biodiversidade e garantindo um futuro sustentável.
+        </p>
+        <p>
+            Sua denúncia pode evitar desastres ambientais, melhorar a qualidade de vida das comunidades e garantir que ações corretivas sejam tomadas. 
+            Faça sua parte e ajude a cuidar do nosso planeta!
+        </p>
+    </div>
+</section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 SGRL - Gestão de Rios e Lagos</p>
+      
+    </footer>
+</body>
+</html>

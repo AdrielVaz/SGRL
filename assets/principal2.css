@@ -1,7 +1,3 @@
-
-
-/* Container Principal */
-/* Reset */
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +11,7 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif;
 }
-/* Header */
+
 /* Header */
 header {
     position: fixed;
@@ -29,10 +25,9 @@ header {
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    z-index: 1000;
 }
 
-/* Logo e Título */
 header .logo {
     display: flex;
     align-items: center;
@@ -52,17 +47,16 @@ header .logo img:hover {
 
 header .logo h1 {
     font-size: 1.5rem;
-    color: #034A6E; /* Azul escuro */
+    color: #034A6E;
     margin: 0;
 }
 
-/* Aviso sobre Funções Adicionais */
 header .aviso {
     margin-left: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #058AB5; /* Azul mais claro */
+    color: #058AB5;
     font-size: 1rem;
     cursor: pointer;
     position: relative;
@@ -86,20 +80,21 @@ header .aviso::after {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    white-space: nowrap;
 }
 
 header .aviso:hover::after {
     opacity: 1;
     visibility: visible;
 }
+
 /* Container Principal */
 .container {
-    background: rgba(255, 255, 255, 0.95); /* Fundo branco com 95% de opacidade */
+    background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 20px;
     text-align: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 120px auto 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -111,23 +106,21 @@ header .aviso:hover::after {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
-
-/* Título Principal */
 .container h1 {
     font-size: 3rem;
-    color: #034A6E; /* Azul escuro */
+    color: #034A6E;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
 }
 
-/* Subtítulo */
 .container h2 {
     font-size: 1.8rem;
-    color: #058AB5; /* Azul mais claro */
+    color: #058AB5;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-/* Parágrafos */
 .container p {
     font-size: 1.2rem;
     color: #555;
@@ -135,26 +128,26 @@ header .aviso:hover::after {
     margin-bottom: 20px;
 }
 
-/* Botões de Ação */
 .container .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #058AB5; /* Azul claro */
+    background: #058AB5;
     color: white;
     border-radius: 10px;
     text-decoration: none;
     font-size: 1.1rem;
     transition: background 0.3s ease, transform 0.3s ease;
     margin: 10px;
+    font-weight: bold;
 }
 
 .container .btn:hover {
-    background: #034A6E; /* Azul escuro */
+    background: #034A6E;
     transform: translateY(-3px);
 }
 
-/* Seção de Destaque com Imagem */
-.container .hero {
+/* Seção Hero */
+.hero {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -162,126 +155,313 @@ header .aviso:hover::after {
     text-align: left;
 }
 
-.container .hero img {
+.hero img {
     width: 300px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.container .hero img:hover {
+.hero img:hover {
     transform: scale(1.05);
 }
 
-.container .hero-content {
+.hero-content {
     flex: 1;
 }
 
-.container .hero h3 {
+.hero h3 {
     font-size: 2rem;
     color: #034A6E;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.container .hero p {
+.hero p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
 }
 
-/* Seção de Chamada para Ação */
-.container .cta {
-    background: rgba(255, 235, 59, 0.9); /* Amarelo para destaque */
-    padding: 30px;
+/* Seção CTA */
+.cta {
+    background: url('/assets/img/riossujo.webp') center/cover no-repeat;
+    padding: 50px;
     border-radius: 15px;
     margin-top: 30px;
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.container .cta h3 {
-    font-size: 2rem;
-    color: #034A6E;
+.cta h3 {
+    font-size: 2.5rem;
+    color: white;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.container .cta p {
+.cta p {
     font-size: 1.2rem;
-    color: #555;
+    color: white;
     margin-bottom: 20px;
 }
 
-/* Seção Sobre a Empresa */
-.container .about-company {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 30px;
-    text-align: left;
+.cta .btn {
+    background: #e0f714;
+    color: #034A6E;
+    font-weight: bold;
 }
 
-.container .about-company img {
-    width: 300px;
+.cta .btn:hover {
+    background: #c4d40f;
+}
+
+/* Seção About Company */
+.about-company {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    text-align: left;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-company:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-company img {
+    width: 400px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.container .about-company img:hover {
+.about-company img:hover {
     transform: scale(1.05);
 }
 
-.container .about-company h3 {
-    font-size: 2rem;
+.about-company .hero-content {
+    flex: 1;
+}
+
+.about-company h3 {
+    font-size: 2.5rem;
     color: #034A6E;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
 }
 
-.container .about-company p {
-    font-size: 1.1rem;
+.about-company h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #058AB5;
+    border-radius: 2px;
+}
+
+.about-company p {
+    font-size: 1.2rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-/* Seção de Contato */
-.container .contact {
+.about-company .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #058AB5;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.about-company .btn:hover {
+    background: #034A6E;
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-company {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about-company img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-company h3 {
+        font-size: 2rem;
+    }
+
+    .about-company p {
+        font-size: 1rem;
+    }
+
+    .about-company .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Seção Contact */
+.contact {
     background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     margin-top: 30px;
     text-align: left;
 }
 
-.container .contact h3 {
+.contact h3 {
     font-size: 2rem;
     color: #034A6E;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.container .contact p {
+.contact p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.container .contact a {
+.contact a {
     color: #058AB5;
     text-decoration: none;
     font-weight: bold;
 }
 
-.container .contact a:hover {
+.contact a:hover {
     text-decoration: underline;
 }
-/* Menu que abre de cima para baixo, alinhado à esquerda do topo */
+
+/* Rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer img {
+    width: 100px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: left;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Carrossel */
+.carrossel {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .hero, .about-company {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img, .about-company img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cta {
+        padding: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content {
+        max-width: 100%;
+    }
+}
+/* Menu que abre de cima para baixo */
 .menu-top {
     position: fixed;
-    top: -100px; /* Inicialmente escondido acima da tela */
-    left: 20px; /* Afastado da lateral esquerda */
-    width: 200px; /* Largura do menu */
-    height: auto; /* Altura automática baseada no conteúdo */
+    top: -100px;
+    left: 20px;
+    width: 200px;
+    height: auto;
     background: linear-gradient(180deg, #058AB5, #6FD9F0);
-    border: 4px solid #034A6E; /* Borda destacada */
+    border: 4px solid #034A6E;
     border-radius: 0px 0px 25px 25px;
     padding: 20px 10px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
@@ -290,22 +470,19 @@ header .aviso:hover::after {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    z-index: 1000;
 }
 
-/* Expandir ao passar o mouse */
 .menu-top:hover {
-    top: 0px; /* Desce para a posição inicial */
+    top: 0px;
 }
 
-/* Imagem do perfil */
 .menu-top img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-/* Links */
 .menu-top a {
     display: flex;
     align-items: center;
@@ -319,27 +496,23 @@ header .aviso:hover::after {
     justify-content: center;
 }
 
-/* Expandir os textos apenas ao passar o mouse */
 .menu-top:hover a {
     justify-content: flex-start;
     padding-left: 15px;
 }
 
-/* Ícones */
 .menu-top a i {
     font-size: 22px;
 }
 
-/* Hover nos links */
 .menu-top a:hover {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
 }
 
-/* Ícone de menu (☰) para indicar que há um menu escondido */
 .menu-icon {
     position: fixed;
-    left: 20px; /* Alinhado com o menu */
+    left: 20px;
     top: 20px;
     font-size: 30px;
     color: #034A6E;
@@ -347,7 +520,6 @@ header .aviso:hover::after {
     transition: 0.3s;
 }
 
-/* Sinal piscando para chamar atenção */
 @keyframes piscar {
     0% { opacity: 1; transform: translateY(-20px); }
     50% { opacity: 0.5; transform: translateY(10px); }
@@ -358,24 +530,24 @@ header .aviso:hover::after {
     animation: piscar 1.5s infinite;
 }
 
-/* Seção Lateral (Imagem e Informações) */
+/* Seção Lateral */
 .side-section {
     position: fixed;
-    right: 20px; /* Posiciona na lateral direita */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta o posicionamento vertical */
-    width: 300px; /* Largura da seção lateral */
-    background: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 999; /* Garante que fique acima do conteúdo */
+    z-index: 999;
 }
 
 .side-section img {
-    width: 100%; /* Imagem ocupa toda a largura da seção */
+    width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -393,58 +565,36 @@ header .aviso:hover::after {
 }
 
 /* Seção Sobre Nós */
-.about {
-    background: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade */
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
-.about h2 {
-    font-size: 2rem;
-    color: #034A6E;
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Seção Nossos Objetivos */
-.goals {
-    background: rgba(255, 255, 255, 0.5); /* Fundo branco com 50% de opacidade */
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.goals h2 {
-    font-size: 2rem;
-    color: #034A6E;
-    margin-bottom: 15px;
-}
-
-.goals p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-}
 
 /* Rodapé */
 footer {
-    background: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* Seção Nossos Objetivos */
+
+/* Rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 20px;
@@ -457,8 +607,8 @@ footer {
 }
 
 footer img {
-    width: 100px; /* Ajuste o tamanho da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
+    width: 100px;
+    border-radius: 10px;
     margin: 10px;
 }
 
@@ -479,4 +629,117 @@ footer p {
     font-size: 1rem;
     margin: 5px 0;
     line-height: 1.4;
+}
+
+/* Seção About */
+.about {
+    background: linear-gradient(135deg, #058AB5, #6FD9F0);
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 90px; /* Adicionado para mover a seção para baixo */
+    border-radius: 40px;
+    border-color: #222;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.about .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+    color: #f0f4f8;
+}
+
+.about .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #034A6E;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about .btn:hover {
+    background: #02314d;
+    transform: translateY(-3px);
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }

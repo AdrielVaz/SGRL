@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background: #EBEFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://img.freepik.com/fotos-premium/fundo-design-colorido-melhor-qualidade-imagem-de-papel-de-parede-hiper-realista_1078161-90199.jpg?semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #058AB5, #6FD9F0);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+/* Logo e Título */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    color: #034A6E; /* Azul escuro */
+    margin: 0;
+}
+
+/* Aviso sobre Funções Adicionais */
+header .aviso {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #058AB5; /* Azul mais claro */
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+header .aviso i {
+    font-size: 1.2rem;
+    color: #058AB5;
+}
+
+header .aviso::after {
+    content: "Mais funções disponíveis no menu superior esquerdo!";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+header .aviso:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Container do Formulário */
+.form-container {
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+    max-width: 800px; /* Limita a largura do formulário */
+    margin: 20px auto; /* Centraliza o formulário */
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #034A6E;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Inputs */
+.form-group {
+    margin-bottom: 15px; /* Reduzi o espaçamento entre os campos */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 12px; /* Reduzi o padding */
+    width: 100%; /* Largura total */
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px; /* Reduzi a altura mínima */
+}
+
+/* Botão de Enviar */
+.submit-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px; /* Reduzi o padding */
+    width: 100%;
+    height: 40px;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+/* Menu que abre de cima para baixo */
+.menu-top {
+    position: fixed;
+    top: -100px;
+    left: 20px;
+    width: 200px;
+    height: auto;
+    background: linear-gradient(180deg, #058AB5, #6FD9F0);
+    border: 4px solid #034A6E;
+    border-radius: 0px 0px 25px 25px;
+    padding: 20px 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    transition: top 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduzi o espaçamento */
+    z-index: 1000;
+}
+
+.menu-top:hover {
+    top: 0px;
+}
+
+.menu-top img {
+    width: 50px; /* Reduzi o tamanho da imagem */
+    height: 50px;
+    border-radius: 50%;
+}
+
+.menu-top a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduzi o espaçamento */
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Reduzi o tamanho da fonte */
+    padding: 8px;
+    transition: 0.3s;
+    width: 100%;
+    justify-content: center;
+}
+
+.menu-top:hover a {
+    justify-content: flex-start;
+    padding-left: 12px; /* Reduzi o padding */
+}
+
+.menu-top a i {
+    font-size: 18px; /* Reduzi o tamanho do ícone */
+}
+
+.menu-top a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+/* Ícone de menu (☰) */
+.menu-icon {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 24px; /* Reduzi o tamanho do ícone */
+    color: #034A6E;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; transform: translateY(-20px); }
+    50% { opacity: 0.5; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(-20px); }
+}
+
+.menu-icon {
+    animation: piscar 1.5s infinite;
+}
+
+/* Seção Lateral (Imagem e Informações) */
+.side-section {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px; /* Reduzi a largura */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px; /* Reduzi o padding */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999;
+}
+
+.side-section img {
+    width: 100%;
+    border-radius: 8px; /* Reduzi o raio da borda */
+    margin-bottom: 10px; /* Reduzi o espaçamento */
+}
+
+.side-section h2 {
+    font-size: 1.5rem; /* Reduzi o tamanho da fonte */
+    color: #034A6E;
+    margin-bottom: 8px; /* Reduzi o espaçamento */
+}
+
+.side-section p {
+    font-size: 0.9rem; /* Reduzi o tamanho da fonte */
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Rodapé */
+/* Estilização do Footer */
+footer {
+   
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.footer-info, .footer-contact, .footer-social {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.footer-contact p, .footer-info p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #6FD9F0;
+}
+
+.footer-bottom {
+    background: #023E58;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.image-section {
+    position: absolute;
+    left: 5%; /* Ajuste conforme necessário */
+    top: 55%; /* Um pouco abaixo do centro */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+/* Seção de Importância da Denúncia */
+.importancia-denuncia {
+    position: relative;
+    width: 100%;
+    padding: 60px 20px;
+    background-image: url('https://img.freepik.com/vetores-gratis/pessoas-limpando-praia_23-2148413130.jpg'); /* Troque pelo link da sua imagem */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+.importancia-denuncia .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Efeito de escurecimento */
+}
+
+.importancia-denuncia .content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.importancia-denuncia h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.importancia-denuncia p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
