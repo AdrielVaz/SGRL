@@ -153,12 +153,12 @@ body {
 /* Menu que abre de cima para baixo, alinhado à esquerda do topo */
 .menu-top {
     position: fixed;
-    top: -100px; /* Inicialmente escondido acima da tela */
-    left: 20px; /* Afastado da lateral esquerda */
-    width: 200px; /* Largura do menu */
-    height: auto; /* Altura automática baseada no conteúdo */
+    top: -100px;
+    left: 20px;
+    width: 200px;
+    height: auto;
     background: linear-gradient(180deg, #058AB5, #6FD9F0);
-    border: 4px solid #034A6E; /* Borda destacada */
+    border: 4px solid #034A6E;
     border-radius: 0px 0px 25px 25px;
     padding: 20px 10px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
@@ -167,22 +167,19 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    z-index: 1000;
 }
 
-/* Expandir ao passar o mouse */
 .menu-top:hover {
-    top: 0px; /* Desce para a posição inicial */
+    top: 0px;
 }
 
-/* Imagem do perfil */
 .menu-top img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-/* Links */
 .menu-top a {
     display: flex;
     align-items: center;
@@ -196,27 +193,23 @@ body {
     justify-content: center;
 }
 
-/* Expandir os textos apenas ao passar o mouse */
 .menu-top:hover a {
     justify-content: flex-start;
     padding-left: 15px;
 }
 
-/* Ícones */
 .menu-top a i {
     font-size: 22px;
 }
 
-/* Hover nos links */
 .menu-top a:hover {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
 }
 
-/* Ícone de menu (☰) para indicar que há um menu escondido */
 .menu-icon {
     position: fixed;
-    left: 20px; /* Alinhado com o menu */
+    left: 20px;
     top: 20px;
     font-size: 30px;
     color: #034A6E;
@@ -224,7 +217,6 @@ body {
     transition: 0.3s;
 }
 
-/* Sinal piscando para chamar atenção */
 @keyframes piscar {
     0% { opacity: 1; transform: translateY(-20px); }
     50% { opacity: 0.5; transform: translateY(10px); }

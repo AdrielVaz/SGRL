@@ -101,6 +101,8 @@ header .aviso:hover::after {
     width: 100%;
     max-width: 800px; /* Limita a largura do formulário */
     margin: 20px auto; /* Centraliza o formulário */
+    height: 900px;
+    margin-top: 80px;
 }
 
 .form-container h1 {
@@ -188,7 +190,7 @@ header .aviso:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Reduzi o espaçamento */
+    gap: 20px;
     z-index: 1000;
 }
 
@@ -197,19 +199,19 @@ header .aviso:hover::after {
 }
 
 .menu-top img {
-    width: 50px; /* Reduzi o tamanho da imagem */
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
 .menu-top a {
     display: flex;
     align-items: center;
-    gap: 8px; /* Reduzi o espaçamento */
+    gap: 10px;
     color: white;
     text-decoration: none;
-    font-size: 14px; /* Reduzi o tamanho da fonte */
-    padding: 8px;
+    font-size: 16px;
+    padding: 10px;
     transition: 0.3s;
     width: 100%;
     justify-content: center;
@@ -217,24 +219,23 @@ header .aviso:hover::after {
 
 .menu-top:hover a {
     justify-content: flex-start;
-    padding-left: 12px; /* Reduzi o padding */
+    padding-left: 15px;
 }
 
 .menu-top a i {
-    font-size: 18px; /* Reduzi o tamanho do ícone */
+    font-size: 22px;
 }
 
 .menu-top a:hover {
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Ícone de menu (☰) */
 .menu-icon {
     position: fixed;
     left: 20px;
     top: 20px;
-    font-size: 24px; /* Reduzi o tamanho do ícone */
+    font-size: 30px;
     color: #034A6E;
     cursor: pointer;
     transition: 0.3s;
@@ -249,7 +250,6 @@ header .aviso:hover::after {
 .menu-icon {
     animation: piscar 1.5s infinite;
 }
-
 /* Seção Lateral (Imagem e Informações) */
 .side-section {
     position: fixed;
